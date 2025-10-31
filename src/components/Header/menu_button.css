@@ -1,0 +1,44 @@
+.menu_button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  background: #000;
+  height: 30px;
+  width: 30px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  transition: all ease 500ms;
+}
+.menu_button_active {
+  background: #fd0000;
+}
+
+.menu_button:hover {
+  transform: scale(1.05);
+}
+
+.menu_button_bar {
+  display: block;
+  width: 15px;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+  transition: all 500ms ease;
+}
+.menu_button_top_bar_active {
+  transform: rotate(45deg);
+}
+.menu_button_bottom_bar_active {
+  transform: rotate(-45deg);
+}
+.menu_button_top_bar_positioned {
+  top: 2.5px;
+}
+.menu_button_bottom_bar_positioned {
+  bottom: 2.5px;
+}
