@@ -27,7 +27,7 @@ jobs:
           script: |
             REMOTE_REPO_URL="https://github.com/EduardoOsteicoechea/eduardoos.com20251031"
             TEMP_CLONE_DIR="/tmp/static_repo_$(date +%s)"
-            DEST_DIR="/var/www/html/api"
+            DEST_DIR="/var/www/html"
 
             sudo mkdir -p "$DEST_DIR"
             sudo chown -R ${{ secrets.USERNAME }}:${{ secrets.USERNAME }} "$DEST_DIR"
