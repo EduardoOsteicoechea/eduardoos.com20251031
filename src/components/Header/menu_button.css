@@ -8,7 +8,6 @@
   background: #000;
   height:  var(--main_button_dimmension);
   width:  var(--main_button_dimmension);
-  border-radius: 4px;
   z-index: 10000;
 
   transition: all ease 500ms;

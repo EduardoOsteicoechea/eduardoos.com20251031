@@ -1,5 +1,5 @@
 import "./menu_button.css"
-import PageMenu from "./PageMenu";
+import MainMenu from "./MainMenu";
 import { useEffect, useState } from "react";
 
 export default function Header() {
@@ -35,7 +35,7 @@ export default function Header() {
         <div className={`menu_button_bar ${isMenuActive ? "menu_button_top_bar_active" : ""} ${areBarsRotated ? "menu_button_top_bar_positioned" : ""}`}></div>
         <div className={`menu_button_bar ${isMenuActive ? "menu_button_bottom_bar_active" : ""} ${areBarsRotated ? "menu_button_bottom_bar_positioned" : ""}`}></div>
       </div>
-      <PageMenu active={isMenuActive} />
+      <MainMenu active={isMenuActive} />
     </>
   );
 }
