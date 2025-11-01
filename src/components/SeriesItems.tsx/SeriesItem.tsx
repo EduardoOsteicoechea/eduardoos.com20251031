@@ -1,12 +1,12 @@
 interface SeriesItem{
-  url:string
+  title:string
 }
 
-export default function SeriesItem({url}:SeriesItem){
+export default function SeriesItem({title}:SeriesItem){
 
   return(
     <div className="series_item">
-      
+      {title}
     </div>
   );
 }

@@ -1,68 +1,250 @@
 import { useEffect, useState } from "react";
-import SeriesItem from "./SeriesItem";
+import { useSearchParams } from "react-router-dom";
+import "./post.css"
 
-interface SeriesItemsDisplayerProps{
-  url:string
+interface SeriesItemsDisplayerProps {
+  url: string
 }
 
-interface Item{
-  title:string,
-  uri:string
+interface SubseriesPost {
+  title: string,
+  uri: string
 }
 
-interface Subseries{
-  title:string,
-  items:Item[]
+interface Subseries {
+  title: string,
+  items: SubseriesPost[]
 }
 
-interface SeriesCategory{
-  title:string,
-  subseries:Subseries[]
+interface SeriesCategory {
+  title: string,
+  subseries: Subseries[]
 }
 
-interface ApiResponse{
-  avalilable_series: SeriesCategory[]
+interface ApiResponse {
+  available_series: SeriesCategory[]
 }
 
-export default function SeriesItemsDisplayer({url}:SeriesItemsDisplayerProps){
+export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps) {
 
-  const [seriesData, setSeriesData] = useState< SeriesCategory[] | null>(null)
+  const [seriesData, setSeriesData] = useState<SeriesCategory[] | null>(null);
+  const [selectedPostData, setSelectedPostData] = useState<Post | null>(null);
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  useEffect(()=>{
 
+  useEffect(() => {
     const getData = async () => {
-
       try {
         const response = await fetch(url);
-
-        if(!response.ok){
+        if (!response.ok) {
           throw new Error(`Error fetching data: ${response.statusText}`);
         }
-
         const data: ApiResponse = await response.json();
-
-        setSeriesData(data.avalilable_series);
-
+        setSeriesData(data.available_series);
       } catch (error) {
         console.error("Failed to load series data: ", error)
       }
-    }
+    };
+    getData();
+  }, [url])
 
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const selectedArticleUri = searchParams.get('article');
+        if (selectedArticleUri) {
+          const response = await fetch(selectedArticleUri);
+          if (!response.ok) {
+            throw new Error(`Error fetching data: ${response.statusText}`);
+          }
+          const data: Post = await response.json();
 
-  },[url])
+          console.log(data)
+          setSelectedPostData(data);
+        }
+      } catch (error) {
+        console.error("Failed to load selected article data: ", error)
+      }
+    };
+    getData();
+  }, [searchParams]);
 
-  return(
+  const handleArticleSelection = (uri: string) => {
+    setSearchParams({ article: uri });
+  };
+
+  return (
     <div>
-      {seriesData?.map((category, categoryIndex)=>(
-        category.subseries.map((subserie, subserieIndex)=>(
-          subserie.items.map((subserieItem,subserieItemIndex)=>(
-            <SeriesItem
-            key={subserieItem.uri}
-            url={subserieItem.uri}
-            />
-          ))
-        ))
-        ))}
+      {seriesData?.map((category) => (
+        <SeriesItem
+          key={category.title}
+          data={category}
+          onArticleSelect={handleArticleSelection}
+        />
+      ))}
+
+      {selectedPostData ?
+        <Post
+          data={selectedPostData}
+        /> : ""
+      }
+
     </div>
   );
+}
+
+interface SeriesItemProps {
+  data: SeriesCategory,
+  onArticleSelect: (uri: string) => void
+}
+
+function SeriesItem({ data, onArticleSelect }: SeriesItemProps) {
+
+  return (
+    <div className="series_item">
+      <h2>{data.title}</h2>
+      {data?.subseries.map((subserie) => (
+        <SubseriesItem
+          key={subserie.title}
+          data={subserie}
+          onArticleSelect={onArticleSelect}
+        />
+      ))}
+    </div>
+  );
+}
+
+interface SubseriesItemProps {
+  data: Subseries,
+  onArticleSelect: (uri: string) => void
+}
+
+function SubseriesItem({ data, onArticleSelect }: SubseriesItemProps) {
+
+  return (
+    <div className="subseries_item">
+      <h2>{data.title}</h2>
+      {data?.items.map((subseriePost) => (
+        <SubseriesItemPost
+          key={subseriePost.title}
+          data={subseriePost}
+          onArticleSelect={onArticleSelect}
+        />
+      ))}
+    </div>
+  );
+}
+
+interface SubseriesPostProps {
+  data: SubseriesPost,
+  onArticleSelect: (uri: string) => void
+}
+
+function SubseriesItemPost({ data, onArticleSelect }: SubseriesPostProps) {
+  const handleClick = () => {
+    onArticleSelect(data.uri);
+  };
+  return (
+    <div className="subseries_item_post">
+      <h2>{data.title}</h2>
+      {data.uri}
+      <button onClick={handleClick}>View</button>
+    </div>
+  );
+}
+
+
+
+
+
+interface PostProps {
+  data:Post
+}
+
+interface Post {
+  title: string,
+  ideas: Idea[],
+}
+interface Idea {
+  heading: string,
+  subideas: Subidea[]
+}
+interface Subidea {
+  content: string,
+  strong_phrases: string[],
+  type: string,
+  biblical_references: string[],
+  quote_reference: string[],
+}
+
+function Post({data}: PostProps) {
+  return (
+    <div className="post">
+      <h1>{data.title}</h1>
+      {
+        data.ideas.map((idea) =>
+          <PostIdea
+            key={idea.heading}
+            data={idea}
+          />
+        )
+      }
+    </div>
+  )
+}
+
+interface PostIdeaProps {
+  data: Idea
+}
+
+function PostIdea({ data }: PostIdeaProps) {
+  return (
+    <div className="post_idea">
+      {!data.heading ? null : <h2>{data.heading}</h2>}
+      {
+        data.subideas.map((subidea, index) =>
+          <PostSubidea
+            key={index}
+            data={subidea}
+          />
+        )
+      }
+    </div>
+  )
+}
+
+interface PostSubideaProps {
+  data: Subidea
+}
+
+function PostSubidea({ data }: PostSubideaProps) {
+  return (
+    <div className="post_subidea">
+      <p className={`post_subidea_${data.type}`}>
+        {data.content}
+      </p>
+
+      {data.biblical_references && data.biblical_references.length > 0 && (
+        <div className="biblical-references">
+          <strong>References:</strong>
+          <ul>
+            {data.biblical_references.map((ref, index) => (
+              <li key={index}>{ref}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {data.quote_reference && data.quote_reference.length > 0 && (
+        <div className="quote-references">
+          {data.quote_reference.map((ref, index) => (
+            <blockquote key={index}>
+              "{ref}"
+            </blockquote>
+          ))}
+        </div>
+      )}
+
+    </div>
+  )
 }

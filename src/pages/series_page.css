@@ -1,5 +1,7 @@
 .series_page {
   padding: 15px !important;
+  z-index: 0;
+  width: 100%;
 }
 
 

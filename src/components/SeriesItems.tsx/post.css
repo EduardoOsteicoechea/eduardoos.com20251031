@@ -1,0 +1,21 @@
+.post{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post_idea{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post_subidea{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post_subidea_biblical_quote{
+  font-style: italic;
+}

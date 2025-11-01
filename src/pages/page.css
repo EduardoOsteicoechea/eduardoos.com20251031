@@ -3,7 +3,7 @@
   min-height: 600px;
   min-width: 600px;
   width: 500px;
-  margin: auto;
+  margin: 0 auto 80px auto;
 }
 
 
@@ -14,5 +14,7 @@
     min-width: 100vw;
     min-height: 100vh;
     width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
 }
