@@ -1,0 +1,32 @@
+{
+  "available_series": [
+    {
+      "title": "BIM Software Development",
+      "subseries": [
+        {
+          "title": "Professional Revit Addins",
+          "items": [
+            {
+              "title": "Los límites de un tema",
+              "uri": "/series_data/bim_software_development/industry_standard_revit_addins/the_walls_of_a_topic.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Spirituality",
+      "subseries": [
+        {
+          "title": "Inspired Hermeneutics",
+          "items": [
+            {
+              "title": "Los límites de un tema",
+              "uri": "/series_data/spirituality/inspired_hermeneutics/the_walls_of_a_topic.json"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
