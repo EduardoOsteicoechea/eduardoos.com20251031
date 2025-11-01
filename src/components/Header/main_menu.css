@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   background: rgba(255,255,255,.15);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
   display: flex;
   flex-direction: column;
   padding: 15px;
@@ -10,7 +10,7 @@
   z-index: 9000;
   top: 0;
   left: -100vw;
-  transition: all ease 100ms;
+  transition: all ease 500ms;
 }
 
 .main_menu_active{
