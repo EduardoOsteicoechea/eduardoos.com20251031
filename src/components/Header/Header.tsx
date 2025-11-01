@@ -18,7 +18,7 @@ export default function Header() {
     }else{
       timer = setTimeout(()=>{
         setAreBarsRotated(false)
-      },150)
+      },200)
     }
 
     return () => {

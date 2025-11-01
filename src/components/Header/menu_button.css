@@ -29,7 +29,8 @@
   height: 7%;
   border-radius: 2px;
   background: #fff;
-  transition: all 500ms ease;
+  transition: all 200ms ease;
+  top: 0px;
 }
 
 .menu_button_top_bar_active {
@@ -58,10 +59,10 @@
   }
 
   .menu_button_top_bar_positioned {
-    top: 4.1px;
+    top: 5.1px;
   }
 
   .menu_button_bottom_bar_positioned {
-    bottom: 4.1px;
+    top: -3.3px;
   }
 }
