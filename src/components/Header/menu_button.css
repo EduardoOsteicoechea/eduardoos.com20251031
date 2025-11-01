@@ -4,15 +4,18 @@
   justify-content: center;
   align-items: center;
   gap: 10%;
+
   background: #000;
   height: 30px;
   width: 30px;
   border-radius: 4px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
   z-index: 10000;
+
   transition: all ease 500ms;
+
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
 }
 
 .menu_button_active {
@@ -54,8 +57,6 @@
   .menu_button {
     height: 50px;
     width: 50px;
-    bottom: 10px;
-    right: 10px;
   }
 
   .menu_button_top_bar_positioned {
