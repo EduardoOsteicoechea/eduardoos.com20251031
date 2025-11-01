@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Children, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./post.css"
 import "./series_menu.css"
@@ -103,9 +103,22 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
   }, [isMenuActive]);
 
   const handleSelectedPostItemClick = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth"
-    })
+    const selected_post_items_container = document.getElementById("selected_post_items_container");
+    const element = document.getElementById(id);
+
+    if(selected_post_items_container){
+      Array.from(selected_post_items_container.children).forEach(element => {
+        element.classList.remove("selected_post_item_selected")
+      });
+    }
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth"
+      })
+      element.classList.add("selected_post_item_selected")
+    }
+
   }
 
   return (
@@ -116,10 +129,13 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
           areBarsRotated={areBarsRotated}
           handleClick={toggleMenu}
         />
-        <div className="selected_post_items_container">
+        <div 
+        id="selected_post_items_container"
+        className="selected_post_items_container">
           {selectedPostData?.ideas.map((idea, index) => (
             <div
               key={index + "_" + idea.heading}
+              id={"selected_post_item" + "_" + idea.heading}
               className="selected_post_item"
               onClick={() => handleSelectedPostItemClick(idea.heading)}
             ></div>

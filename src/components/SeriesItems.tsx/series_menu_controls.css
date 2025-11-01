@@ -6,7 +6,7 @@
   height: var(--small_button_dimmension);
   z-index: 10000;
   position: fixed;
-  
+
 }
 
 .selected_post_items_container{
@@ -24,4 +24,10 @@
   background: #000;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.selected_post_item_selected{
+  height: 10px;
+  width: 10px;
+  background: #ff0000 !important;
 }

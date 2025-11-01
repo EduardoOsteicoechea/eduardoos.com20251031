@@ -11,7 +11,8 @@
   top: 0;
   left: -100vw;
   transition: all ease 500ms;
-  overflow: hidden;
+  overflow-x: hidden;
+  padding: 50px 15px 15px 15px;
 }
 
 .series_menu_active{
