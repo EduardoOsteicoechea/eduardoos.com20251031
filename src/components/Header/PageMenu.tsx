@@ -7,7 +7,7 @@ interface PageMenuProps {
 
 export default function PageMenu(props: PageMenuProps) {
   return (
-    <div className={`page_menu ${props.active ? "active" : "disabled"}`}>
+    <div className={`page_menu ${props.active ? "page_menu_active" : ""}`}>
       <Link to="/" >Home</Link>
       <Link to="/series" >Series</Link>
     </div>

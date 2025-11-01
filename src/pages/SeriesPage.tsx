@@ -7,7 +7,6 @@ export default function SeriesPage() {
       <p>
         This is the series page
       </p>
-      <Header />
     </div>
   )
 }
