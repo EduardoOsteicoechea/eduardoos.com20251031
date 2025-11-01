@@ -6,8 +6,8 @@
   gap: 10%;
 
   background: #000;
-  height: 30px;
-  width: 30px;
+  height:  var(--main_button_dimmension);
+  width:  var(--main_button_dimmension);
   border-radius: 4px;
   z-index: 10000;
 
@@ -15,7 +15,7 @@
 
   position: fixed;
   bottom: 15px;
-  right: 15px;
+  right: calc(50% - var(--main_button_dimmension) / 2);
 }
 
 .menu_button_active {
@@ -55,8 +55,8 @@
 
 @media screen and (max-width:400px) {
   .menu_button {
-    height: 50px;
-    width: 50px;
+    height: var(--main_button_dimmension);
+    width: var(--main_button_dimmension);
   }
 
   .menu_button_top_bar_positioned {
