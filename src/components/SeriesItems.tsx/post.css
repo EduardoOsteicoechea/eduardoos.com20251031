@@ -1,7 +1,28 @@
+.available_series_menu{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  position: absolute;
+  z-index: 9000;
+  top: 0;
+  left: -100vw;
+  transition: all ease 500ms;
+}
+
+.available_series_menu_disabled{
+  left: 0;
+}
+
 .post{
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-top: 40px;
 }
 
 .post_idea{

@@ -1,6 +1,7 @@
 import "./menu_button.css"
 import MainMenu from "./MainMenu";
 import { useEffect, useState } from "react";
+import MenuButton from "./MenuButton";
 
 export default function Header() {
   const [isMenuActive, setIsMenuActive] = useState(false);
@@ -11,18 +12,18 @@ export default function Header() {
   };
 
   useEffect(() => {
-    let timer:any;
+    let timer: any;
 
-    if(isMenuActive){
-        setAreBarsRotated(true)
-    }else{
-      timer = setTimeout(()=>{
+    if (isMenuActive) {
+      setAreBarsRotated(true)
+    } else {
+      timer = setTimeout(() => {
         setAreBarsRotated(false)
-      },200)
+      }, 200)
     }
 
     return () => {
-      if(timer){
+      if (timer) {
         clearTimeout(timer);
       }
     }
@@ -31,10 +32,11 @@ export default function Header() {
 
   return (
     <>
-      <div className={`menu_button ${isMenuActive ? "menu_button_active" : "menu_button_disabled"}`} onClick={toggleMenu}>
-        <div className={`menu_button_bar ${isMenuActive ? "menu_button_top_bar_active" : ""} ${areBarsRotated ? "menu_button_top_bar_positioned" : ""}`}></div>
-        <div className={`menu_button_bar ${isMenuActive ? "menu_button_bottom_bar_active" : ""} ${areBarsRotated ? "menu_button_bottom_bar_positioned" : ""}`}></div>
-      </div>
+      <MenuButton
+        isMenuActive={isMenuActive}
+        areBarsRotated={areBarsRotated}
+        handleClick={toggleMenu}
+      />
       <MainMenu active={isMenuActive} />
     </>
   );

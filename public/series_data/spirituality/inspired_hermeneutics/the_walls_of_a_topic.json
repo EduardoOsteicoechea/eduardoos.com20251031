@@ -2,7 +2,7 @@
   "title": "Los límites de un tópico",
   "ideas": [
     {
-      "heading": "Jesús no era un literalista",
+      "heading": "No es tan sencillo como parece",
       "subideas": [
         {
           "content": "¿Cómo interpretarías este mandamiento?:"
@@ -12,52 +12,68 @@
           "strong_phrases": [],
           "type": "biblical_quote",
           "biblical_references": [],
-          "quote_reference": ["Deuteronomio 5:12-14"]
+          "quote_reference": [
+            "Deuteronomio 5:12-14"
+          ]
         },
         {
-          "content":"A primera vista, parece que el mandamiento prohibe todo lo que no sea \"reposo para Dios\" ¿cierto?"
+          "content": "A primera vista, parece que el mandamiento prohibe todo lo que no sea \"reposo para Dios\" ¿cierto?"
         },
         {
-          "content":"Pareciera que esta instrucción prohibe todo lo que escape de una contemplación pasiva de la obra de Dios."
+          "content": "Pareciera que esta instrucción prohibe todo lo que escape de una contemplación pasiva de la obra de Dios."
         },
         {
-          "content":"Más aún, ¿cómo interpretaríamos este mandamiento sabiendo que el libro comienza diciendo?"
+          "content": "Más aún, ¿cómo interpretaríamos este mandamiento sabiendo que el libro comienza diciendo?"
         },
         {
           "content": "...Ustedes no añadirán nada a la palabra que yo les mando, ni quitarán nada de ella, para que guarden los mandamientos del Señor Su Dios que yo les mando.",
           "strong_phrases": [],
           "type": "biblical_quote",
           "biblical_references": [],
-          "quote_reference": ["Deuteronomio 4:2"]
+          "quote_reference": [
+            "Deuteronomio 4:2"
+          ]
         },
         {
-          "content":"Esta declaración de observación y manipulación respetuosa y exacta parece hacer más evidente que toda obra diferente a la contemplación pasiva queda excluída."
+          "content": "Esta declaración de observación y manipulación respetuosa y exacta parece hacer más evidente que toda obra diferente a la contemplación pasiva queda excluída."
         },
         {
-          "content":"Y mucho más, ¿cómo interpretaríamos este mandamiento si consideramos que Jesús dijo:?"
+          "content": "Y mucho más, ¿cómo interpretaríamos este mandamiento si consideramos que Jesús dijo:?"
         },
         {
           "content": "... Cualquiera, pues, que anule uno solo de estos mandamientos, aun de los más pequeños, y así lo enseñe a otros, será llamado muy pequeño en el reino de los cielos.",
           "strong_phrases": [],
           "type": "biblical_quote",
           "biblical_references": [],
-          "quote_reference": ["Mateo 5:19-20"]
+          "quote_reference": [
+            "Mateo 5:19-20"
+          ]
         },
         {
-          "content":"Pienso que naturalmente haríamos lo que hicieron los fariseos del tiempo de Cristo."
+          "content": "Pienso que naturalmente haríamos lo que hicieron los fariseos del tiempo de Cristo."
         },
         {
-          "content":"Pienso que diríamos \"No debe hacerse ninguna actividad que no sea adorar y reposar los sábados\", e igualmente concluiríamos que todo el que trabaje intensamente en este día se opone a la voluntad divina."
+          "content": "Pienso que diríamos \"No debe hacerse ninguna actividad que no sea adorar y reposar los sábados\", e igualmente concluiríamos que todo el que trabaje intensamente en este día se opone a la voluntad divina."
         },
         {
-          "content":"Sin embargo, cuando vemos cómo el Espíritu Santo y cómo el Señor Jesucristo, interpretaron este mandamiento, notarmos que el entendimiento adecuado era mucho más refinado:"
+          "content": "Sin embargo, cuando vemos cómo el Espíritu Santo y cómo el Señor Jesucristo, interpretaron este mandamiento, notarmos que el entendimiento adecuado era mucho más refinado:"
         },
         {
           "content": "¿Qué hombre habrá de ustedes que tenga una sola oveja, si esta se le cae en un hoyo en el día de reposo, no le echa mano y la saca? Pues, ¡cuánto más vale un hombre que una oveja! Por tanto, es licito hacer bien en el día de reposo.",
           "strong_phrases": [],
           "type": "biblical_quote",
           "biblical_references": [],
-          "quote_reference": ["Mateo 12:11-12"]
+          "quote_reference": [
+            "Mateo 12:11-12"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Jesús no era un literalista",
+      "subideas": [
+        {
+          "content": "¿Cómo interpretarías este mandamiento?:"
         }
       ]
     }

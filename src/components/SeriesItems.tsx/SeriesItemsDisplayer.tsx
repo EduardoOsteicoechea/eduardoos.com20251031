@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./post.css"
+import "./series_menu.css"
+import "./series_menu_controls.css"
+import SeriesMenuButton from "./SeriesMenuButton";
 
 interface SeriesItemsDisplayerProps {
   url: string
@@ -30,6 +33,9 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
   const [seriesData, setSeriesData] = useState<SeriesCategory[] | null>(null);
   const [selectedPostData, setSelectedPostData] = useState<Post | null>(null);
   const [searchParams, setSearchParams] = useSearchParams();
+
+  const [isMenuActive, setIsMenuActive] = useState(false);
+  const [areBarsRotated, setAreBarsRotated] = useState(false);
 
 
   useEffect(() => {
@@ -73,23 +79,71 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
     setSearchParams({ article: uri });
   };
 
-  return (
-    <div>
-      {seriesData?.map((category) => (
-        <SeriesItem
-          key={category.title}
-          data={category}
-          onArticleSelect={handleArticleSelection}
-        />
-      ))}
+  const toggleMenu = () => {
+    setIsMenuActive((prev) => !prev)
+  };
 
-      {selectedPostData ?
-        <Post
-          data={selectedPostData}
-        /> : ""
+  useEffect(() => {
+    let timer: any;
+
+    if (isMenuActive) {
+      setAreBarsRotated(true)
+    } else {
+      timer = setTimeout(() => {
+        setAreBarsRotated(false)
+      }, 200)
+    }
+
+    return () => {
+      if (timer) {
+        clearTimeout(timer);
       }
+    }
 
-    </div>
+  }, [isMenuActive]);
+
+  const handleSelectedPostItemClick = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth"
+    })
+  }
+
+  return (
+    <>
+      <div className="series_menu_controls">
+        <SeriesMenuButton
+          isMenuActive={isMenuActive}
+          areBarsRotated={areBarsRotated}
+          handleClick={toggleMenu}
+        />
+        <div className="selected_post_items_container">
+          {selectedPostData?.ideas.map((idea, index) => (
+            <div
+              key={index + "_" + idea.heading}
+              className="selected_post_item"
+              onClick={() => handleSelectedPostItemClick(idea.heading)}
+            ></div>
+          ))}
+        </div>
+      </div>
+
+      <div className={`series_menu ${isMenuActive ? "series_menu_active" : ""}`}>
+        {seriesData?.map((category) => (
+          <SeriesItem
+            key={category.title}
+            data={category}
+            onArticleSelect={handleArticleSelection}
+          />
+        ))}
+      </div>
+
+      <div className="post_container">
+        {selectedPostData ?
+          <Post
+            data={selectedPostData}
+          /> : ""}
+      </div>
+    </>
   );
 }
 
@@ -158,7 +212,7 @@ function SubseriesItemPost({ data, onArticleSelect }: SubseriesPostProps) {
 
 
 interface PostProps {
-  data:Post
+  data: Post
 }
 
 interface Post {
@@ -177,9 +231,12 @@ interface Subidea {
   quote_reference: string[],
 }
 
-function Post({data}: PostProps) {
+function Post({ data }: PostProps) {
   return (
-    <div className="post">
+    <article
+      className="post"
+      id="post"
+    >
       <h1>{data.title}</h1>
       {
         data.ideas.map((idea) =>
@@ -189,7 +246,7 @@ function Post({data}: PostProps) {
           />
         )
       }
-    </div>
+    </article>
   )
 }
 
@@ -200,7 +257,7 @@ interface PostIdeaProps {
 function PostIdea({ data }: PostIdeaProps) {
   return (
     <div className="post_idea">
-      {!data.heading ? null : <h2>{data.heading}</h2>}
+      {!data.heading ? null : <h2 id={data.heading}>{data.heading}</h2>}
       {
         data.subideas.map((subidea, index) =>
           <PostSubidea
@@ -238,7 +295,7 @@ function PostSubidea({ data }: PostSubideaProps) {
       {data.quote_reference && data.quote_reference.length > 0 && (
         <div className="quote_references_container">
           {data.quote_reference.map((ref, index) => (
-            <p  className="quote_reference" key={index}>
+            <p className="quote_reference" key={index}>
               {ref}
             </p>
           ))}
