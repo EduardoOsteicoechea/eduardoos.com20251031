@@ -1,19 +1,20 @@
 .post{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .post_idea{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .post_subidea{
   display: flex;
   flex-direction: column;
   gap: 10px;
+  line-height: 20px;
 }
 
 .post_subidea_biblical_quote{
