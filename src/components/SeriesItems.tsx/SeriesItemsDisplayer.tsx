@@ -236,11 +236,11 @@ function PostSubidea({ data }: PostSubideaProps) {
       )}
 
       {data.quote_reference && data.quote_reference.length > 0 && (
-        <div className="quote-references">
+        <div className="quote_references_container">
           {data.quote_reference.map((ref, index) => (
-            <blockquote key={index}>
-              "{ref}"
-            </blockquote>
+            <p  className="quote_reference" key={index}>
+              {ref}
+            </p>
           ))}
         </div>
       )}

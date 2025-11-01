@@ -13,11 +13,23 @@
 .post_subidea{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   line-height: 20px;
 }
 
 .post_subidea_biblical_quote{
   font-style: italic;
   font-weight: 600;
+}
+
+.quote_references_container{
+  display: flex;
+  justify-content: end;
+  width: 70%;
+  margin: 0 0 0 auto;
+}
+
+.quote_reference{
+  background: #f0f0f0;
+  padding: 5px 8px;
 }
