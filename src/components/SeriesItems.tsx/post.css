@@ -24,9 +24,7 @@
 
 .quote_references_container{
   display: flex;
-  justify-content: end;
-  width: 70%;
-  margin: 0 0 0 auto;
+  margin: 0 0 0 0;
 }
 
 .quote_reference{
