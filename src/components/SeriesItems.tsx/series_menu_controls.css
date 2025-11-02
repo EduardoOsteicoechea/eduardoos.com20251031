@@ -3,10 +3,12 @@
   align-items: center;
   gap: 10px;
   width: 100%;
-  height: var(--small_button_dimmension);
+  height: 50px;
   z-index: 10000;
   position: fixed;
-
+  top: 0;
+  background: linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,1));
+  padding: 10px 0;
 }
 
 .selected_post_items_container{

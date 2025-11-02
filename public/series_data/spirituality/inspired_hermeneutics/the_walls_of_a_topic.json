@@ -2,7 +2,15 @@
   "title": "Los límites de un tópico",
   "ideas": [
     {
-      "heading": "No es tan sencillo como parece",
+      "heading": "Introducción",
+      "subideas": [
+        {
+          "content": "Cuando Dios pone el temor por Su Palabra en la mente del escogido, cosas ocurren tanto cosas maravillosas como nuevos riesgos."
+        }
+      ]
+    },
+    {
+      "heading": "¿Tan sencillo como parece?",
       "subideas": [
         {
           "content": "¿Cómo interpretarías este mandamiento?:"
@@ -17,13 +25,13 @@
           ]
         },
         {
-          "content": "A primera vista, parece que el mandamiento prohibe todo lo que no sea \"reposo para Dios\" ¿cierto?"
+          "content": "A primera vista, parece que el mandamiento prohibe todo lo que no sea \"reposo\", ¿cierto?"
         },
         {
-          "content": "Pareciera que esta instrucción prohibe todo lo que escape de una contemplación pasiva de la obra de Dios."
+          "content": "Pareciera que toda actividad fuera de contemplar la obra de Dios quedaría excluída."
         },
         {
-          "content": "Más aún, ¿cómo interpretaríamos este mandamiento sabiendo que el libro comienza diciendo?"
+          "content": "Más aún, cómo interpretaríamos esto sabiendo que Deuteronomio, el libro que contiene este mandamiento, comienza con estas instrucciones:"
         },
         {
           "content": "...Ustedes no añadirán nada a la palabra que yo les mando, ni quitarán nada de ella, para que guarden los mandamientos del Señor Su Dios que yo les mando.",
@@ -35,10 +43,27 @@
           ]
         },
         {
-          "content": "Esta declaración de observación y manipulación respetuosa y exacta parece hacer más evidente que toda obra diferente a la contemplación pasiva queda excluída."
+          "content": "Para esta interpretación también tendríamos que considerar que la ley y la historia del Antiguo Testamento indican que este mandamiento era tan crítico que todo el que trabajara en día de reposo debía enfrentar la pena de muerte:"
         },
         {
-          "content": "Y mucho más, ¿cómo interpretaríamos este mandamiento si consideramos que Jesús dijo:?"
+          "content": "Probada es toda palabra de Dios; Él es escudo para los que en Él se refugian. No añadas a Sus palabras, no sea que Él te reprendas y seas hallado mentiroso.",
+          "type": "biblical_quote",
+          "quote_reference": [
+            "Proverbios 30:5-6"
+          ]
+        },
+        {
+          "content": "Igualmente, cómo tomaríamos el mandamiento del sábado, si consideramos que Salomón, el filósofo más sabio de la historia, advirtió contra la modificación de los mandamientos de esta manera:"
+        },
+        {
+          "content": "Probada es toda palabra de Dios; Él es escudo para los que en Él se refugian. No añadas a Sus palabras, no sea que Él te reprendas y seas hallado mentiroso.",
+          "type": "biblical_quote",
+          "quote_reference": [
+            "Proverbios 30:5-6"
+          ]
+        },
+        {
+          "content": "Más aún, cómo interpretaríamos este mandamiento del sábado, considerando que Jesús, nuestro Emperador, nos advirtió con estas palabras:"
         },
         {
           "content": "... Cualquiera, pues, que anule uno solo de estos mandamientos, aun de los más pequeños, y así lo enseñe a otros, será llamado muy pequeño en el reino de los cielos.",
@@ -50,13 +75,32 @@
           ]
         },
         {
-          "content": "Pienso que naturalmente haríamos lo que hicieron los fariseos del tiempo de Cristo."
+          "content": "Pienso que tomando en cuenta estas consideraciones, tenderíamos a lo que hicieron los fariseos."
         },
         {
-          "content": "Pienso que diríamos \"No debe hacerse ninguna actividad que no sea adorar y reposar los sábados\", e igualmente concluiríamos que todo el que trabaje intensamente en este día se opone a la voluntad divina."
+          "content": "Pienso que diríamos:"
         },
         {
-          "content": "Sin embargo, cuando vemos cómo el Espíritu Santo y cómo el Señor Jesucristo, interpretaron este mandamiento, notarmos que el entendimiento adecuado era mucho más refinado:"
+          "content": "\"No debe hacerse ninguna actividad que no sea adorar y reposar de manera pasiva los sábados\".",
+          "type": "soft_quote"
+        },
+        {
+          "content": "E igualmente pienso que pudiéramos concluir que incluso las actividades ministeriales enérgicas y llenas de desplazamiento serían inapropiadas."
+        },
+        {
+          "content": "Parece sencillo, ¿cierto?"
+        },
+        {
+          "content": "Si la totalidad del pueblo de Dios debía reposar el sábado, y si los mandamientos debían guardarse exactamente como se habían entregado, ¿quién pudiera insistir en que trabajar con ganado, dezplazarse enérgicamente entre ciudades, trabajar arduamente en el templo, o realizar intensas actividades ministeriales, eran obras lícitas para este día?"
+        },
+        {
+          "content": "Tal vez no sea tu caso, pero puedo asegurarte he hecho esto en un monton de ocasiones."
+        },
+        {
+          "content": "Sin embargo, quisiera preguntarte, ¿cómo crees que interpretaría este mandamiento el Espíritu Santo?"
+        },
+        {
+          "content": "Las Escrituras muestran exactamente cómo lo hicieron en muchas ocasiones:"
         },
         {
           "content": "¿Qué hombre habrá de ustedes que tenga una sola oveja, si esta se le cae en un hoyo en el día de reposo, no le echa mano y la saca? Pues, ¡cuánto más vale un hombre que una oveja! Por tanto, es licito hacer bien en el día de reposo.",

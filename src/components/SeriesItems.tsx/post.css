@@ -42,6 +42,9 @@
   font-style: italic;
   font-weight: 600;
 }
+.post_subidea_soft_quote{
+  font-style: italic;
+}
 
 .quote_references_container{
   display: flex;

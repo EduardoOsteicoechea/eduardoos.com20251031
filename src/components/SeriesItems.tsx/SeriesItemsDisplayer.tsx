@@ -37,6 +37,11 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [areBarsRotated, setAreBarsRotated] = useState(false);
 
+  //////////////////////////
+  //////////////////////////
+  /// SERIES DATA LOADER
+  //////////////////////////
+  //////////////////////////
 
   useEffect(() => {
     const getData = async () => {
@@ -54,6 +59,12 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
     getData();
   }, [url])
 
+  //////////////////////////
+  //////////////////////////
+  /// POST LOADER
+  //////////////////////////
+  //////////////////////////
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -64,8 +75,6 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
             throw new Error(`Error fetching data: ${response.statusText}`);
           }
           const data: Post = await response.json();
-
-          console.log(data)
           setSelectedPostData(data);
         }
       } catch (error) {
@@ -77,7 +86,13 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
 
   const handleArticleSelection = (uri: string) => {
     setSearchParams({ article: uri });
-  };
+  };  
+
+  //////////////////////////
+  //////////////////////////
+  /// SERIES MENU
+  //////////////////////////
+  //////////////////////////
 
   const toggleMenu = () => {
     setIsMenuActive((prev) => !prev)
@@ -103,20 +118,20 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
   }, [isMenuActive]);
 
   const handleSelectedPostItemClick = (id: string) => {
-    const selected_post_items_container = document.getElementById("selected_post_items_container");
     const element = document.getElementById(id);
-
-    if (selected_post_items_container) {
-      Array.from(selected_post_items_container.children).forEach(element => {
-        element.classList.remove("selected_post_item_selected")
-      });
-    }
+    
+    // const selected_post_items_container = document.getElementById("selected_post_items_container");
+    // if (selected_post_items_container) {
+    //   Array.from(selected_post_items_container.children).forEach(element => {
+    //     element.classList.remove("selected_post_item_selected")
+    //   });
+    // }
 
     if (element) {
       element.scrollIntoView({
         behavior: "smooth"
       })
-      element.classList.add("selected_post_item_selected")
+      // element.classList.add("selected_post_item_selected")
     }
 
   }
@@ -269,10 +284,11 @@ function Post({ data }: PostProps) {
     >
       <h1>{data.title}</h1>
       {
-        data.ideas.map((idea) =>
+        data.ideas.map((idea, index) =>
           <PostIdea
-            key={idea.heading}
+            key={idea.heading ?? `${index}_unitled`}
             data={idea}
+            ideaNumber={index+1}
           />
         )
       }
@@ -282,12 +298,13 @@ function Post({ data }: PostProps) {
 
 interface PostIdeaProps {
   data: Idea
+  ideaNumber: number
 }
 
-function PostIdea({ data }: PostIdeaProps) {
+function PostIdea({ data, ideaNumber }: PostIdeaProps) {
   return (
     <div className="post_idea">
-      {!data.heading ? null : <h2 id={data.heading}>{data.heading}</h2>}
+      {!data.heading ? null : <h2 id={data.heading}>{ideaNumber}. {data.heading}</h2>}
       {
         data.subideas.map((subidea, index) =>
           <PostSubidea
