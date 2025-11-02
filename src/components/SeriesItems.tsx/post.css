@@ -47,7 +47,7 @@
   content: "\"";
 }
 .post_subidea_biblical_quote::after{
-  content: "\",";
+  content: "\".";
 }
 .post_subidea_soft_quote{
   font-style: italic;
