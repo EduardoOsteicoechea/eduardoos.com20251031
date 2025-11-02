@@ -6,6 +6,7 @@ export default function HomePage() {
         <p>
           Page in construction
         </p>
+        <br />
         <p>
           Press the button bellow to see the available pages
         </p>
