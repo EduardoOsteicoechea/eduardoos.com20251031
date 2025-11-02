@@ -41,17 +41,49 @@
 .post_subidea_biblical_quote{
   font-style: italic;
   font-weight: 600;
+  margin: 0 0 0 40px;
+}
+.post_subidea_biblical_quote::before{
+  content: "\"";
+}
+.post_subidea_biblical_quote::after{
+  content: "\"";
 }
 .post_subidea_soft_quote{
   font-style: italic;
 }
 
-.quote_references_container{
+.post_subidea_biblically_justified_idea{  
+  flex-direction: row;
+}
+
+.biblical_references_container{
   display: flex;
-  margin: 0 0 0 0;
+  margin: 5px 0 0 0px;
+  gap: 5px;
+}
+.biblical_reference{
+  background: #f0f0f0;
+  padding: 4px 8px;
+  font-size: 14px;
 }
 
 .quote_reference{
   background: #f0f0f0;
-  padding: 5px 8px;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+.quote_references_container{
+  display: flex;
+  margin: 0 0 0 40px;
+}
+
+.quote_reference{
+  background: #f0f0f0;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.strong_phrase{
+  color: rgb(255, 119, 0) !important;
 }

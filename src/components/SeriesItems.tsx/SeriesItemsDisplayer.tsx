@@ -86,7 +86,7 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
 
   const handleArticleSelection = (uri: string) => {
     setSearchParams({ article: uri });
-  };  
+  };
 
   //////////////////////////
   //////////////////////////
@@ -119,7 +119,7 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
 
   const handleSelectedPostItemClick = (id: string) => {
     const element = document.getElementById(id);
-    
+
     // const selected_post_items_container = document.getElementById("selected_post_items_container");
     // if (selected_post_items_container) {
     //   Array.from(selected_post_items_container.children).forEach(element => {
@@ -288,7 +288,7 @@ function Post({ data }: PostProps) {
           <PostIdea
             key={idea.heading ?? `${index}_unitled`}
             data={idea}
-            ideaNumber={index+1}
+            ideaNumber={index + 1}
           />
         )
       }
@@ -322,22 +322,29 @@ interface PostSubideaProps {
 }
 
 function PostSubidea({ data }: PostSubideaProps) {
+  let formmatedData = data.content;
+
+  if(data.strong_phrases){
+    for (let index = 0; index < data.strong_phrases.length; index++) {
+      const element = data.strong_phrases[index];
+      console.log(element)
+      formmatedData.replace(element, `<span class="strong_phrase">${element}</span>`)
+    } 
+  }
+
   return (
     <div className="post_subidea">
       <p className={`post_subidea_${data.type}`}>
-        {data.content}
-      </p>
-
-      {data.biblical_references && data.biblical_references.length > 0 && (
-        <div className="biblical-references">
-          <strong>References:</strong>
-          <ul>
+        {/* {data.content} */}
+        {formmatedData}
+        {data.biblical_references && data.biblical_references.length > 0 && (
+          <span className="biblical_references_container">
             {data.biblical_references.map((ref, index) => (
-              <li key={index}>{ref}</li>
+              <span className="biblical_reference" key={index}>{ref}</span>
             ))}
-          </ul>
-        </div>
-      )}
+          </span>
+        )}
+      </p>
 
       {data.quote_reference && data.quote_reference.length > 0 && (
         <div className="quote_references_container">
