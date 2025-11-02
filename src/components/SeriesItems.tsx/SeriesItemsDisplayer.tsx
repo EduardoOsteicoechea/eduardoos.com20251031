@@ -106,7 +106,7 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
     const selected_post_items_container = document.getElementById("selected_post_items_container");
     const element = document.getElementById(id);
 
-    if(selected_post_items_container){
+    if (selected_post_items_container) {
       Array.from(selected_post_items_container.children).forEach(element => {
         element.classList.remove("selected_post_item_selected")
       });
@@ -121,6 +121,12 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
 
   }
 
+  //////////////////////////
+  //////////////////////////
+  /// Main UI
+  //////////////////////////
+  //////////////////////////
+
   return (
     <>
       <div className="series_menu_controls">
@@ -129,9 +135,9 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
           areBarsRotated={areBarsRotated}
           handleClick={toggleMenu}
         />
-        <div 
-        id="selected_post_items_container"
-        className="selected_post_items_container">
+        <div
+          id="selected_post_items_container"
+          className="selected_post_items_container">
           {selectedPostData?.ideas.map((idea, index) => (
             <div
               key={index + "_" + idea.heading}
@@ -163,6 +169,12 @@ export default function SeriesItemsDisplayer({ url }: SeriesItemsDisplayerProps)
   );
 }
 
+//////////////////////////
+//////////////////////////
+/// Main UI
+//////////////////////////
+//////////////////////////
+
 interface SeriesItemProps {
   data: SeriesCategory,
   onArticleSelect: (uri: string) => void
@@ -172,7 +184,7 @@ function SeriesItem({ data, onArticleSelect }: SeriesItemProps) {
 
   return (
     <div className="series_item">
-      <h2>{data.title}</h2>
+      <div className="series_category_heading">{data.title}</div>
       {data?.subseries.map((subserie) => (
         <SubseriesItem
           key={subserie.title}
@@ -193,7 +205,7 @@ function SubseriesItem({ data, onArticleSelect }: SubseriesItemProps) {
 
   return (
     <div className="subseries_item">
-      <h2>{data.title}</h2>
+      <div className="series_category_series_heading">{data.title}</div>
       {data?.items.map((subseriePost) => (
         <SubseriesItemPost
           key={subseriePost.title}
@@ -216,15 +228,17 @@ function SubseriesItemPost({ data, onArticleSelect }: SubseriesPostProps) {
   };
   return (
     <div className="subseries_item_post">
-      <h2>{data.title}</h2>
-      {data.uri}
-      <button onClick={handleClick}>View</button>
+      <div className="series_category_series_article_heading">{data.title}</div>
+      <button className="series_category_series_article_heading_button" onClick={handleClick}>View</button>
     </div>
   );
 }
 
-
-
+//////////////////////////
+//////////////////////////
+/// POST
+//////////////////////////
+//////////////////////////
 
 
 interface PostProps {
