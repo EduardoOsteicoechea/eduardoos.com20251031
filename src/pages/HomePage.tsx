@@ -4,7 +4,10 @@ export default function HomePage() {
   return (
       <div className="page">
         <p>
-          My name is Eduardo Osteicoechea
+          Page in construction
+        </p>
+        <p>
+          Press the button bellow to see the available pages
         </p>
       </div>
   )
