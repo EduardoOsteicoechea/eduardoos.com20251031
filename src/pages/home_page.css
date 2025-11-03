@@ -32,6 +32,19 @@
   line-height: 30px;
 }
 
+.pitch_text>p {
+  line-height: 25px;
+}
 
+.key_idea{
+  height: 20px;
+  font-size: 14px;
+  line-height: 14px;
+  display: inline-block;
+  background: rgba(255, 255, 255, .75);
+  border-radius: 4px;
+  padding: 2px 6px 2px 6px;
+  font-weight: 700;
+}
 
 @media screen and (max-width: 400px) {}

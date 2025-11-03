@@ -11,7 +11,7 @@ export default function HomePage() {
           <div className="pitch_text">
 
           <h1>Eduardo Osteicoechea</h1>
-          <p>I'm a Full Stack - Desktop / Web - Developer and BIM Architect - and UI / UX designer, with a strong focus on the AEC industry and AI Integrations.</p>
+          <p><span className="key_idea">Full Stack</span> Desktop/Web<span className="key_idea">Developer</span>, <br/><span className="key_idea">BIM Architect</span> - and<br /><span className="key_idea">UI/UX designer</span>, with a strong focus on the AEC industry and AI Integrations.</p>
           </div>
         </div>
       </div>
