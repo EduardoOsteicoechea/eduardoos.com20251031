@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
       <div className="page">
         <div className="background_image">
-          <img src="/images/personal_photo_1000x500px.jpg" alt="Personal Photo" height="100%" />
+          <img src="/images/personal_photo_1000x500px.jpg" alt="Personal Photo" width="100%" />
         </div>
         <div className="pitch_container">
           <div className="pitch_text">
