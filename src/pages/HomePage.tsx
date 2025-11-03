@@ -1,15 +1,12 @@
 import "./page.css"
+import "./home_page.css"
 
 export default function HomePage() {
   return (
       <div className="page">
-        <p>
-          Page in construction
-        </p>
-        <br />
-        <p>
-          Press the button bellow to see the available pages
-        </p>
+        <div className="background_image">
+          <img src="/images/personal_photo_1000x500px.jpg" alt="Personal Photo" height="100%" />
+        </div>
       </div>
   )
 }

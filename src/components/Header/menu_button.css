@@ -14,6 +14,7 @@
 
   position: fixed;
   bottom: 25px;
+  border: solid 1px #fff;
   right: calc(50% - var(--main_button_dimmension) / 2);
 }
 

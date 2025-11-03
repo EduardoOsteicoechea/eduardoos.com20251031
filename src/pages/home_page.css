@@ -1,0 +1,20 @@
+.page{
+  height: 100vh;
+}
+
+.background_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1000;
+}
+
+.background_image > img {
+}
+
+
+
+@media screen and (max-width: 400px) {
+  
+}
