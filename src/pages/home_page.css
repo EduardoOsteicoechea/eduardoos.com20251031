@@ -4,7 +4,7 @@
   left: 0;
   height: 100%;
   z-index: -1000;
-  min-height: 660px !important;
+  height: 660px !important;
 }
 
 .background_image>img {}
@@ -43,8 +43,8 @@
   line-height: 14px;
   display: inline-block;
   background: rgba(255, 255, 255, .75);
-  border-radius: 4px;
-  padding: 2px 6px 2px 6px;
+  /* border-radius: 4px; */
+  padding: 2px 6px 1px 6px;
   font-weight: 700;
 }
 
