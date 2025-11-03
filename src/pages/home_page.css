@@ -1,4 +1,4 @@
-.page{
+.page {
   height: 100vh;
 }
 
@@ -10,11 +10,33 @@
   z-index: -1000;
 }
 
-.background_image > img {
+.background_image>img {}
+
+.pitch_container {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  width: 100%;
+
+}
+
+.pitch_text {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, .75);
+  backdrop-filter: blur(5px);
+  padding: 10px 12px 15px 12px;
+  margin: 0 15px;
+  z-index: 1000;
+  gap: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+}
+
+.pitch_text>h1 {
+  font-size: 30px;
+  line-height: 30px;
 }
 
 
 
-@media screen and (max-width: 400px) {
-  
-}
+@media screen and (max-width: 400px) {}
