@@ -1,5 +1,5 @@
 .page {
-  height: 100vh;
+  height: 100dvh;
 }
 
 .background_image {
@@ -17,7 +17,6 @@
   bottom: 90px;
   left: 0;
   width: 100%;
-
 }
 
 .pitch_text {
