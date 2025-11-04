@@ -8,7 +8,6 @@
 }
 
 body {
-  max-width: 640px;
   margin: auto;
 }
 
@@ -26,6 +25,6 @@ button{
 @media screen and (max-width:400px) {
   :root {
     --small_button_dimmension: 25px;
-    --main_button_dimmension: 50px;
+    --main_button_dimmension: 40px;
   }
 }
