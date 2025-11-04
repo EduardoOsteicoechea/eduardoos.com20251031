@@ -8,8 +8,10 @@
   display: flex;
   flex-direction: column;
 }
+
 .page{
   width: 100vw !important;
+  height: 100dvh !important;
   margin: auto;
 }
 
@@ -17,7 +19,7 @@
 
 .pitch_container {
   position: absolute;
-  bottom: 90px;
+  bottom: 15px;
   left: 0;
   width: 100%;
 }
@@ -25,9 +27,9 @@
 .pitch_text {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, .75);
+  background: rgba(255, 255, 255, 1);
   backdrop-filter: blur(5px);
-  padding: 10px 12px 15px 12px;
+  padding: 12px 12px 7px 12px;
   margin: 0 15px;
   z-index: 1000;
   gap: 10px;
@@ -35,16 +37,17 @@
 }
 
 .pitch_text>h1 {
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 20px;
 }
 
 .pitch_text>p {
   line-height: 25px;
+  font-size: 14px;
 }
 
 .key_idea{
-  height: 20px;
+  height: 19px;
   font-size: 14px;
   line-height: 14px;
   display: inline-block;
