@@ -32,7 +32,7 @@
   flex-direction: column;
   align-items: center;
   transition: all ease 100ms;
-  gap: 10px;
+  gap: 15px;
 }
 .main_menu_main_link{
   display: flex;
