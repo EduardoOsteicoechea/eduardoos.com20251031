@@ -17,6 +17,7 @@ export default function MainMenu(props: MainMenuProps) {
 
   return (
     <div className={`main_menu ${props.active ? "main_menu_active" : ""}`}>
+      <h2 className="main_menu_heading">Main Menu</h2>
       <div className="main_menu_link_container">
         <MainMenuItem
           to="/"

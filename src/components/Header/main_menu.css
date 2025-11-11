@@ -1,11 +1,10 @@
 .main_menu{
   width: 100vw;
   height: 100vh;
-  background: rgba(255,255,255,.15);
-  backdrop-filter: blur(5px);
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 15px;
   position: absolute;
   z-index: 9000;
@@ -18,13 +17,15 @@
   left: 0;
 }
 
-.main_menu_title{
-  margin: 10px auto 25px auto;
-  font-size: 25px;
+.main_menu_heading{
+  font-size: 30px;
+  font-weight: 900;
+  text-align: left;
+  margin: 12px 0 0 0;
 }
 
 .main_menu_link_container{
-  margin: 60px 0 0 0;
+  margin: 20px 0 0 0;
   height: 100%;
   width: 135px;
   width: 100%;
