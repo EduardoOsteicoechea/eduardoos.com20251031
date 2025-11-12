@@ -31,7 +31,7 @@ export default function MainMenu(props: MainMenuProps) {
           to="/series"
           heading="Series"
           message="Read my articles in ethics and biblical teaching and reflexion."
-          image="/images/icon_article.png"
+          image="/images/icon_series.png"
           selectedItem={selectedItem}
           handleSelectedItem={handleSelected}
         />
