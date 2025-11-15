@@ -5,6 +5,7 @@ import { useState } from "react";
 
 interface MainMenuProps {
   active: boolean
+  toggleMenu: ()=>void
 }
 
 export default function MainMenu(props: MainMenuProps) {
@@ -13,6 +14,7 @@ export default function MainMenu(props: MainMenuProps) {
 
   const handleSelected = (selected: string) => {
     setSelectedItem(selected);
+    props.toggleMenu();
   }
 
   return (

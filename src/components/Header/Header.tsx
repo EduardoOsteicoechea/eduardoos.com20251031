@@ -37,7 +37,10 @@ export default function Header() {
         areBarsRotated={areBarsRotated}
         handleClick={toggleMenu}
       />
-      <MainMenu active={isMenuActive} />
+      <MainMenu 
+      active={isMenuActive}
+      toggleMenu={toggleMenu}
+      />
     </>
   );
 }
