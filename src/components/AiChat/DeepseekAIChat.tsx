@@ -25,7 +25,8 @@ export default function DeepseekAIChat() {
       const getAiResponse = async () => {
         setIsLoading(true);
         const requestBody = {
-          text: lastMessage.content
+          role:"user",
+          content: lastMessage.content
         };
         try {
           const response = await fetch("https://eduardoos.com/api/profile/assistant", {
@@ -48,7 +49,7 @@ export default function DeepseekAIChat() {
           console.error("Failed to fetch AI response:", error);
           const errorResponse: ChatMessage = {
             role: "assistant",
-            content: "Sorry, I ran into an error. Please try again."
+            content: "Error: " + error
           };
           setChatMessages((prev) => [...prev, errorResponse]);
         } finally {
