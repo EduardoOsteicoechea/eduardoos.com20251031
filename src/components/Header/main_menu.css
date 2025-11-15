@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100vh;
   background: rgba(255,255,255,.75);
+  background: #fff;
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
