@@ -1,0 +1,3 @@
+https://eduardoos.com/api/profile/assistant
+
+post

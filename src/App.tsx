@@ -3,6 +3,7 @@ import './App.css'
 import HomePage from './pages/HomePage'
 import SeriesPage from './pages/SeriesPage'
 import Header from './components/Header/Header'
+import ProfileChatPage from './pages/ProfileChatPage'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/series" element={<SeriesPage />} />
+        <Route path="/ai_assistant" element={<ProfileChatPage />} />
       </Routes>
 
     </BrowserRouter>

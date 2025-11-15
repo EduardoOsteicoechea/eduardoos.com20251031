@@ -30,6 +30,14 @@ export default function MainMenu(props: MainMenuProps) {
           handleSelectedItem={handleSelected}
         />
         <MainMenuItem
+          to="/ai_assistant"
+          heading="AI Assistant"
+          message="Ask anything about my profile, tech stack, background and current focus."
+          image="/images/icon_series.png"
+          selectedItem={selectedItem}
+          handleSelectedItem={handleSelected}
+        />
+        <MainMenuItem
           to="/series"
           heading="Series"
           message="Read my articles in ethics and biblical teaching and reflexion."
