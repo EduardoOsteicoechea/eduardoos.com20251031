@@ -40,7 +40,7 @@ export default function MainMenu(props: MainMenuProps) {
         <MainMenuItem
           to="/series"
           heading="Series"
-          message="Read my articles in ethics and biblical teaching and reflexion."
+          message="Read my articles in ethics, biblical teaching and cultural reflexion."
           image="/images/icon_series.png"
           selectedItem={selectedItem}
           handleSelectedItem={handleSelected}
