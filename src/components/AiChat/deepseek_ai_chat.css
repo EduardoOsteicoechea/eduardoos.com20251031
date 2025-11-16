@@ -8,7 +8,7 @@
 .ai_chat_message{
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   padding: 10px;
   background: #f0f0f0;
   color: #444;

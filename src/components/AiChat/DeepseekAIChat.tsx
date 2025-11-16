@@ -94,23 +94,45 @@ export default function DeepseekAIChat() {
     <div className="ai_chat">
 
       {chatMessages?.map((message, messageIndex) => (
-        <div
-          key={messageIndex}
-          className={`ai_chat_message ${message.role}`}
-        >
-          <div className="ai_chat_message_role_and_time_container">
-            <p className="ai_chat_message_role">{message.role}</p>
-            <p className="ai_chat_message_time">{message.time}</p>
-          </div>
-          {message.content}
-        </div>
+        <ChatMessage 
+        message={message}
+        index={messageIndex}
+        />
       ))}
 
-      {isLoading && <div className="chat-message assistant">Generating...</div>}
+      {isLoading && 
+      <ChatMessage 
+        message={{
+            role: "assistant",
+            content: "Generating",
+            time: getCurrentTime()
+          }}
+        index={0}
+        />}
 
       <ChatUserInput
         handleSubmit={handleMessageSubmit}
       />
     </div>
+  )
+}
+
+interface ChatMessageProps{
+  message: ChatMessage
+  index: number
+}
+
+function ChatMessage(props: ChatMessageProps) {
+  return (
+    <div
+          key={props.index}
+          className={`ai_chat_message ${props.message.role}`}
+        >
+          <div className="ai_chat_message_role_and_time_container">
+            <p className="ai_chat_message_role">{props.message.role === "user" ? "You" : "Assistant" }</p>
+            <p className="ai_chat_message_time">{props.message.time}</p>
+          </div>
+          {props.message.content}
+        </div>
   )
 }
