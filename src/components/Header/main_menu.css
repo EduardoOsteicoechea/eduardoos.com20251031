@@ -16,6 +16,7 @@
 
 .main_menu_active{
   left: 0;
+  position: sticky;
 }
 
 .main_menu_heading{
