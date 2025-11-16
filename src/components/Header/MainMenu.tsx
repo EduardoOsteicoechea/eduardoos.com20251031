@@ -73,8 +73,8 @@ function MainMenuItem(props: MainMenuItemProps) {
           </div>
         </div>
         <div className="main_menu_item_data_card_message_button_container">
-          <p className="main_menu_item_data_card_message">{props.message}</p>
-          <Link to={props.to} className="main_menu_item_data_card_button" onClick={()=>props.handleSelectedItem(props.heading)}>View</Link>
+          <p className={`main_menu_item_data_card_message  ${props.selectedItem == props.heading ? "main_menu_item_data_card_message_selected" : ""}`}>{props.message}</p>
+          <Link to={props.to} className={`main_menu_item_data_card_button  ${props.selectedItem == props.heading ? "main_menu_item_data_card_button_selected" : ""}`} onClick={()=>props.handleSelectedItem(props.heading)}>View</Link>
         </div>
       </div>
     </div>
