@@ -1,5 +1,37 @@
 .ai_chat{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+  padding: 10px 0px 0px 0px;
+}
+
+.ai_chat_message{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  background: #f0f0f0;
+  color: #444;
+}
+
+.user{
+  width: 80%;
+  margin-left: auto;
+  background: #eee;
+}
+
+.assistant{
+  width: 80%;
+  background: #ccc;
+}
+
+.ai_chat_message_role_and_time_container{
+display: flex;
+
+}
+.ai_chat_message_role{
+
+}
+.ai_chat_message_time{
+margin-left: auto;
 }

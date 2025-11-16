@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./chat_user_input.css"
 
 interface ChatUserInputProps {
   handleSubmit: (message: string) => void

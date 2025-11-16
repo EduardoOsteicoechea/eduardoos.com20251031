@@ -4,7 +4,8 @@ import ChatUserInput from "./ChatUserInput";
 
 interface ChatMessage {
   role: string,
-  content: string
+  content: string,
+  time: string
 }
 
 export default function DeepseekAIChat() {
@@ -12,9 +13,17 @@ export default function DeepseekAIChat() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleMessageSubmit = (message: string) => {
-    const newUserMessage: ChatMessage = { role: "user", content: message };
+    const newUserMessage: ChatMessage = { role: "user", content: message, time: getCurrentTime() };
     setChatMessages((prev) => [...prev, newUserMessage]);
   }
+
+  const getCurrentTime = (): string => {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    return `${hours}:${minutes}`;
+  };
+
   useEffect(() => {
     if (chatMessages.length === 0) return;
 
@@ -59,6 +68,7 @@ export default function DeepseekAIChat() {
           const newAiMessage: ChatMessage = {
             role: "assistant",
             content: aiContent,
+            time: getCurrentTime()
           };
 
           setChatMessages((prev) => [...prev, newAiMessage]);
@@ -68,6 +78,7 @@ export default function DeepseekAIChat() {
           const errorResponse: ChatMessage = {
             role: "assistant",
             content: (error as Error).message,
+            time: getCurrentTime()
           };
           setChatMessages((prev) => [...prev, errorResponse]);
         } finally {
@@ -81,11 +92,21 @@ export default function DeepseekAIChat() {
 
   return (
     <div className="ai_chat">
+
       {chatMessages?.map((message, messageIndex) => (
-        <div key={messageIndex}>{message.content}</div>
+        <div
+          key={messageIndex}
+          className={`ai_chat_message ${message.role}`}
+        >
+          <div className="ai_chat_message_role_and_time_container">
+            <p className="ai_chat_message_role">{message.role}</p>
+            <p className="ai_chat_message_time">{message.time}</p>
+          </div>
+          {message.content}
+        </div>
       ))}
 
-      {isLoading && <div className="chat-message assistant">Assistant is typing...</div>}
+      {isLoading && <div className="chat-message assistant">Generating...</div>}
 
       <ChatUserInput
         handleSubmit={handleMessageSubmit}

@@ -1,0 +1,27 @@
+.chat_user_input{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: auto;
+  padding: 10px;
+  background: #eee;
+  gap: 7px;
+}
+.chat_user_input_input{
+  border: none;
+  height: 70px;
+  border-radius: 0;
+  padding: 5px 10px;
+}
+.chat_user_input_submit_button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 80px;
+  background: #000;
+  color: #fff;
+  font-family: inherit;
+  align-self: flex-end;
+  border: none;
+}
