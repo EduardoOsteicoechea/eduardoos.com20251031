@@ -1,19 +1,17 @@
 .series_menu{
   width: 100vw;
   height: 100vh;
-  background: rgba(255,255,255,.15);
-  backdrop-filter: blur(10px);
+  background: #fff;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 15px;
   position: absolute;
-  z-index: 9000;
+  z-index: 12000;
   top: 0;
   left: -100vw;
   transition: all ease 500ms;
   overflow-x: hidden;
-  padding: 50px 15px 15px 15px;
+  padding: 65px 15px 15px 15px;
 }
 
 .series_menu_active{
@@ -30,16 +28,16 @@
 .subseries_item{
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 .subseries_item_post{
   display: flex;
-  height: 50px;
-  background: #fff;
+  height: 95px;
+  gap: 10px;
+  background: #f0f0f0;
   margin: 0 15px 0 40px;
-  padding: 5px 8px 8px 8px;
+  padding: 10px;
   max-width: 300px;
-  box-shadow: 5px 5px 5px rgba(0,0,0,.35);
 }
 
 
@@ -52,25 +50,33 @@
   height: 20px;
 }
 .series_category_series_heading{
-  margin: 0 0 0 20px;
+  margin: 10px 0 5px 20px;
   font-weight: 600;
   font-size: 14px;
   height: 20px;
 }
+.series_category_series_article_info_container{
+   display: flex;
+   gap: 10px;
+   flex-direction: column;
+  width: 80%;
+}
 .series_category_series_article_heading{
   font-weight: 600;
   font-size: 14px;
-  height: 20px;
-  width: 80%;
-
+}
+.series_category_series_article_date{
+   font-size: 14px;
+   color: #444;
+   margin-top: auto;
 }
 .series_category_series_article_heading_button{
   align-self: self-end;
   background: #000;
   border-radius: 0;
-  height: 20px;
-  width: 20%;
-  font-size: 10px;
+  height: 25px;
+  width: 80px;
+  font-size: 12px;
   font-weight: 600;
   display: flex;
   align-items: center;

@@ -8,26 +8,31 @@
                "items": [
                   {
                      "title": "Valuable Multitaskers",
+                     "date": "November, 2025",
                      "uri": "/series_data/bim_software_development/industry_standard_revit_addins/strong_and_valuable_multitaskers.json"
                   }
                   ,
                   {
                      "title": "A despicable formatting bug ruined my parameter population",
+                     "date": "October, 2025",
                      "uri": "/series_data/bim_software_development/industry_standard_revit_addins/a_despicable_formatting_bug_ruined_my_parameter_population.json"
                   }
                   ,
                   {
                      "title": "Solids won't intersect with spatial elements in the revit api!",
+                     "date": "October, 2025",
                      "uri": "/series_data/bim_software_development/industry_standard_revit_addins/solids_wont_intersect_with_spatial_elements_in_the_revit_api.json"
                   }
                   ,
                   {
                      "title": "Code is the natural language",
+                     "date": "March, 2025",
                      "uri": "/series_data/bim_software_development/industry_standard_revit_addins/code_is_the_natural_language.json"
                   }
                   ,
                   {
                      "title": "Avoid property iteration",
+                     "date": "October, 2025",
                      "uri": "/series_data/bim_software_development/industry_standard_revit_addins/avoid_property_iteration.json"
                   }
                ]
