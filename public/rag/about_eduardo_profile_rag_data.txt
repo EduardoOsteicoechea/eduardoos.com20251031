@@ -7,7 +7,7 @@ January 19 of 1992
 
 ---
 **Core Professional Identity**
-Christian Thinker, BIM Architect and Multiplatform Developer committed to professional excellence and ethics.
+BIM Architect and Multiplatform Developer committed to professional excellence and ethics.
 
 ---
 **Formal Studies - Degree**
@@ -71,7 +71,7 @@ On the last quarter of 2023, I started as a six moths journey as a Web Fullstack
 During this period, I provided services on Python scripting, hosting setup, email migration, Fullstack development, UI & UX Design, image and video editing, and graphic design. 
 
 ---
-**Avant Leap (BIM Software Developer, March 2024 - Present)**
+**Avant Leap (BIM Software Developer, March 2024 - July 2025)**
 After that, In March of 2024, I started a role as a professional BIM software developer at Avant Leap, an AI BIM Software development startup based in California.
 Here, I provided support and functionality extensions for Revit Add-ins such as Clash Detection, Object Visualizer, Object Quantifier, 4D Simulation, Avant Leap's Revit Dynamo Zero Touch Nodes, Mirar, Andiamo, and Itera.
 I also authored the full design and coding of the SincronizadorGPS50, a desktop Windows Forms and SQL Server application to connect Gestproject2024 and Sage50.
@@ -79,8 +79,36 @@ Remarkably, during this period, I was introduced to AI integrations for applicat
 This company received services in Windows Applications development, API development, RevitAPI External Command, Revit Add-in development, Revit Dynamo Zero Touch Nodes development, and AI integration through my multitasking role.
 
 ---
+**Voyansy (BIM Software Developer, July 2025 - Current)**
+In July 2025, I joined Voyansy, a provider of advanced BIM solutions for AEC companies based in Argentina, as a professional BIM Software Developer.
+Here, I have been instrumental in supporting, extending, and designing functionality for a complex Model Checker Revit Add-in.
+This role represents the highest level at which I have worked with the Revit API.
+We have generated clever geometrical and methodological solutions to evaluate model features and validate their compliance with the client's governmental normative (or standards).
+This experience has also been a significant learning opportunity in Agile methodology, Jira workflows, and coordinated team work using GitHub.
+
+---
 **Current Focus**
 Currently, I'm developing Fullstack web applications with React and .NET minimal APIs, GitHub CI & CD workflows for AWS, leveraging the DeepSeek AI API, and using SQLite, with the aim of moving towards multiplatform integrations for AI-powered BIM applications for the AEC Industry.
+
+---
+**Value proposition**
+I am a multitasking professional Architect and Software Developer, focused on providing services that range from Web/Cloud/Desktop software development, AI integrations, BIM automations, BIM coordination, BIM modeling, and parametric Revit families design and modeling, to UI/UX design. My goal is to enhance the products and services of AEC companies.
+
+---
+**Tech Stack**
+My core technical stack includes expertise in C#, .NET, WPF, Python, JavaScript, TypeScript, and PHP, utilizing frameworks such as React and Vite. I have extensive experience with various databases, including SQL, MySQL, SQL Server, and SQLite. For AEC and BIM workflows, I am proficient with Revit, the Revit API, Revit Dynamo, AutoCAD, SketchUp, ACC (Autodesk Construction Cloud), and BIM 360. DevOps and infrastructure skills cover AWS (EC2), Linux, Nginx, Git, and GitHub, including the implementation of CI/CD pipelines. Supporting technologies include HTML, CSS, Bootstrap, Inno Setup, NUnit, Blender, Inkscape, GIMP, and Microsoft Excel.
+
+---
+**Soft Skills**
+Advanced communication and writing, leadership, problem resolution, teamwork, Advanced English, Native Spanish, hand drawing, problem solving, research, and ease of learning.
+
+---
+**Hobbies and Interest**
+I love to spend time discovering new places with my son and serving diverse Christian public through biblical teaching and cultural reflection.
+
+---
+**Vision**
+To lead diverse automation services and initiatives to enhance products and services for AEC companies.
 
 ---
 **Final Statement**
