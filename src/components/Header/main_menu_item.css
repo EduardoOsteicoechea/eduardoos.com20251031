@@ -2,6 +2,7 @@
   border: sold 1px red;
   display: flex;
   gap: 10px;
+  max-width: 400px;
 }
 
 .main_menu_item_icon_container {

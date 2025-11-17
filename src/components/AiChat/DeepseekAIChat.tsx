@@ -5,7 +5,8 @@ import ChatUserInput from "./ChatUserInput";
 interface ChatMessage {
    role: string,
    content: string,
-   time: string
+   time?: string,
+   messageType?: string | null
 }
 
 export default function DeepseekAIChat() {
@@ -61,11 +62,21 @@ export default function DeepseekAIChat() {
                   throw new Error("Received an invalid response format from the server.");
                }
 
-               const newAiMessage: ChatMessage = {
+               let newAiMessage: ChatMessage = {
                   role: "assistant",
                   content: aiContent,
                   time: getCurrentTime()
                };
+
+
+               if (aiContent === "RunPublicSocialMediaLinksFunction") {
+                  newAiMessage = {
+                     role: "assistant",
+                     content: "Here are the social media links you requested:",
+                     messageType: "socialLinks",
+                     time: getCurrentTime()
+                  };
+               }
 
                setChatMessages((prev) => [...prev, newAiMessage]);
 
@@ -91,6 +102,12 @@ export default function DeepseekAIChat() {
       <div className="ai_chat">
 
          {chatMessages?.map((message, messageIndex) => (
+            message.messageType === "socialLinks" ? 
+            <SocialMediaLinksChatMessage
+               message={message}
+               index={messageIndex}
+            />
+            :
             <ChatMessage
                message={message}
                index={messageIndex}
@@ -130,6 +147,23 @@ function ChatMessage(props: ChatMessageProps) {
             <p className="ai_chat_message_time">{props.message.time}</p>
          </div>
          {props.message.content}
+      </div>
+   )
+}
+function SocialMediaLinksChatMessage(props: ChatMessageProps) {
+   return (
+      <div
+         key={props.index}
+         className={`ai_chat_message ${props.message.role}`}
+      >
+         <div className="ai_chat_message_role_and_time_container">
+            <p className="ai_chat_message_role">{props.message.role === "user" ? "You" : "Assistant"}</p>
+            <p className="ai_chat_message_time">{props.message.time}</p>
+         </div>
+         {props.message.content}
+         <a href="https://www.linkedin.com/in/eduardoosteicoechea/" target="_blank">LinkedIn</a>
+         <a href="https://wa.me/584147281033" target="_blank">WhatsApp</a>
+         <a href="mailto:eduardooost@gmail.com" target="_blank">Email</a>
       </div>
    )
 }

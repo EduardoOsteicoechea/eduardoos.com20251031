@@ -3,6 +3,8 @@
   flex-direction: column;
   gap: 15px;
   padding: 10px 0px 0px 0px;
+  max-width: 600px;
+  
 }
 
 .ai_chat_message{
