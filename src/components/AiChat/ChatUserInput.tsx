@@ -23,6 +23,7 @@ export default function ChatUserInput({ handleSubmit }: ChatUserInputProps) {
         className="chat_user_input_input"
         onInput={handleInput}
         value={message}
+        placeholder="Write your question here..."
       ></textarea>
       <button className="chat_user_input_submit_button" onClick={handleSendClick}>Send</button>
     </div>
