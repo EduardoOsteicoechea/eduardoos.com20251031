@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import "./main_menu.css"
 import "./main_menu_item.css"
-import { useState } from "react";
 
 interface MainMenuProps {
    active: boolean
@@ -12,8 +11,7 @@ export default function MainMenu(props: MainMenuProps) {
 
    // const [selectedItem, setSelectedItem] = useState("Home");
 
-   const handleSelected = (selected: string) => {
-      // setSelectedItem(selected);
+   const handleSelected = () => {
       props.toggleMenu();
    }
 
@@ -64,7 +62,7 @@ interface MainMenuItemProps {
    message: string,
    image: string,
    // selectedItem: string,
-   handleSelectedItem: (a: any) => void,
+   handleSelectedItem: () => void,
 }
 
 function MainMenuItem(props: MainMenuItemProps) {
@@ -92,7 +90,7 @@ function MainMenuItem(props: MainMenuItemProps) {
                <Link 
                to={props.to} 
                className={`main_menu_item_data_card_button ${isSelected ? "main_menu_item_data_card_button_selected" : ""}`}
-               onClick={() => props.handleSelectedItem(props.heading)}
+               onClick={() => props.handleSelectedItem()}
                >View</Link>
                {/* <Link to={props.to} className={`main_menu_item_data_card_button  ${props.selectedItem == props.heading ? "main_menu_item_data_card_button_selected" : ""}`} onClick={() => props.handleSelectedItem(props.heading)}>View</Link> */}
             </div>
