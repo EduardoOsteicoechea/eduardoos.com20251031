@@ -33,7 +33,7 @@ export default function MainMenu(props: MainMenuProps) {
           to="/ai_assistant"
           heading="AI Assistant"
           message="Ask anything about my profile, tech stack, background and focus."
-          image="/images/icon_series.png"
+          image="/images/icon_ai.png"
           selectedItem={selectedItem}
           handleSelectedItem={handleSelected}
         />
@@ -62,21 +62,27 @@ interface MainMenuItemProps {
 function MainMenuItem(props: MainMenuItemProps) {
   return (
     <div className="main_menu_item">
-      <div className="main_menu_item_icon_container">
+
+      <div className={`main_menu_item_icon_container ${props.selectedItem == props.heading ? "main_menu_item_icon_container_selected" : ""}`}>
         <img src={props.image} height="100%" />
       </div>
-      <div className="main_menu_item_data_card">
+
+      <div className={`main_menu_item_data_card ${props.selectedItem == props.heading ? "main_menu_item_data_card_selected" : ""}`}>
+         
         <div className="main_menu_item_data_card_heading_indicator_container">
           <h3 className="main_menu_item_data_card_heading">{props.heading}</h3>
           <div className={`main_menu_item_status_indicator_outer_ring`}>
             <div className={`main_menu_item_status_indicator ${props.selectedItem == props.heading ? "selected" : ""}`}></div>
           </div>
         </div>
+
         <div className="main_menu_item_data_card_message_button_container">
           <p className={`main_menu_item_data_card_message  ${props.selectedItem == props.heading ? "main_menu_item_data_card_message_selected" : ""}`}>{props.message}</p>
           <Link to={props.to} className={`main_menu_item_data_card_button  ${props.selectedItem == props.heading ? "main_menu_item_data_card_button_selected" : ""}`} onClick={()=>props.handleSelectedItem(props.heading)}>View</Link>
         </div>
+
       </div>
+
     </div>
   )
 }

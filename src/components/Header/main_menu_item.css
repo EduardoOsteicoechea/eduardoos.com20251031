@@ -13,6 +13,9 @@
   padding: 0px;
   background: #eee;
 }
+.main_menu_item_icon_container_selected {
+  background: #fff;
+}
 
 .main_menu_item_icon_container>img {
   height: 110%;
@@ -26,6 +29,9 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+.main_menu_item_data_card_selected {
+  background: #fff;
 }
 
 .main_menu_item_data_card_heading_indicator_container {
