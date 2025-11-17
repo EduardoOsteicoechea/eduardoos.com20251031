@@ -1,0 +1,20 @@
+{
+  "title": "Avoid property iteration",
+  "ideas": [
+    {
+      "subideas": [
+        {
+          "content": "AVOID PROPERTY ITERATION! It seems efficient for comprehensive reporting and use but involves a critical danger. It complicates extending a type by requiring checks in every place that iterates over its properties."
+        }
+        , 
+        {
+          "content": "Prefer selective property access."
+        }
+        , 
+        {
+          "content": "This allows indefinite type extension without requiring new checks on its previous uses."
+        }        
+      ]
+    }
+  ]
+}

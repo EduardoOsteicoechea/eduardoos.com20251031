@@ -1,0 +1,20 @@
+{
+  "title": "Solids won't intersect with spatial elements in the revit api!",
+  "ideas": [
+    {
+      "subideas": [
+        {
+          "content": "SOLIDS WON'T INTERSECT WITH SPATIAL ELEMENTS IN THE REVIT API! Yesterday, I spent nearly three hours tweaking my code to filter for rooms intersecting a solid. It was so frustrating. I tried every combination of FilteredElementCollector methods that I could think of in conjunction with the ElementIntersectsSolidFilter, but all of them failed."
+        }
+        , 
+        {
+          "content": "Thankfully, I finally thought, \"At this point, I won't lose anything if I get the solid of each room on that level and search for intersections with my solid,\" and voilà! There were the intersections."
+        }
+        , 
+        {
+          "content": "This reminded me that solids don't intersect with spatial elements in the Revit API (at least, not directly). But you can find the intersecting rooms by obtaining each room's geometry solid and validating if its intersection with your solid is successful and has a meaningful volume."
+        }        
+      ]
+    }
+  ]
+}

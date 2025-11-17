@@ -1,0 +1,52 @@
+{
+  "title": "A despicable formatting bug ruined my parameter population",
+  "ideas": [
+    {
+      "subideas": [
+        {
+          "content": "A DESPICABLE FORMATTING BUG RUINED MY PARAMETER POPULATION. These are the worst kind of errors. They are like spirits, invisible but effectual. I spent hours checking why my code won't write to some parameters."
+        }
+        ,
+        {
+          "content":"I checked everything. I debugged, tweaked statements, printed logs, displayed messages, and everything was fine. Everything, except some parameter value population."
+        }
+        ,
+        {
+          "content":"\"Why is this happening?!!! The code is in place, the data is flowing, transactions are completing, even the values are being printed in logs, but nothing happens in the model\" – I said to myself."
+        }
+        ,
+        {
+          "content":"I even reached out to another developer to ask if they had changed some global setting in the project, but nothing. I’m so frustrated."
+        }
+        ,
+        {
+          "content":"And then… Eureka! 💡"
+        }
+        ,
+        {
+          "content":"I remembered that some days ago we struggled with an annoying regional formatting issue involving commas and periods in decimal symbol formatting."
+        }
+        ,
+        {
+          "content":"When your Windows Decimal Symbol is set to comma, under “Time & Language → Language & Region → Number”, your double variables use that symbol as their decimal delimiter."
+        }
+        ,
+        {
+          "content":"This is a Windows setting. It’s outside of the code. Nonetheless, it is impactful for the program because it’s employed at runtime."
+        }
+        ,
+        {
+          "content":"And well, Revit doesn’t like that. It’s a picky software. The Revit API silently (and buggily, in my opinion) leaves the parameter value intact instead of changing it. It would be better if it provided a report (even a nasty exception would be better) in these situations."
+        }
+        ,
+        {
+          "content":"Thank God I recalled this. It was traumatic. I even decided to write this post to see if it sticks in my mind in case I’m not able to port my helpers to another project."
+        }
+        ,
+        {
+          "content":"So, remember, environmental settings affect your program. Check the context before refactoring, and maybe set a list of runtime considerations that should be accounted for in your applications."
+        }
+      ]
+    }
+  ]
+}
