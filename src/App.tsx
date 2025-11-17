@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import SeriesPage from './pages/SeriesPage'
 import Header from './components/Header/Header'
 import ProfileChatPage from './pages/ProfileChatPage'
+import ProfilePage from './pages/ProfilePage'
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/series" element={<SeriesPage />} />
         <Route path="/ai_assistant" element={<ProfileChatPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/series" element={<SeriesPage />} />
       </Routes>
 
     </BrowserRouter>

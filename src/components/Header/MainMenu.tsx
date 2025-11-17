@@ -38,6 +38,14 @@ export default function MainMenu(props: MainMenuProps) {
           handleSelectedItem={handleSelected}
         />
         <MainMenuItem
+          to="/profile"
+          heading="Profile"
+          message="View my professional background, skills, value proposition and focus."
+          image="/images/icon_profile.png"
+          selectedItem={selectedItem}
+          handleSelectedItem={handleSelected}
+        />
+        <MainMenuItem
           to="/series"
           heading="Series"
           message="Read my articles in ethics, biblical teaching and cultural reflexion."

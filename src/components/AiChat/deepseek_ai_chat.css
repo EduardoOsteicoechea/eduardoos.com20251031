@@ -38,3 +38,24 @@ display: flex;
 margin-left: auto;
   color: #777;
 }
+
+.ai_chat_message_buttons_container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 5px;
+}
+.ai_chat_message_button{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-decoration: none;
+   font-size: 13px;
+   font-family: inherit;
+   background: #00ff91;
+   color: #000;
+   font-weight: 600;
+   height: 30px;
+   width: 90px;
+   margin-left: auto;
+}

@@ -102,16 +102,16 @@ export default function DeepseekAIChat() {
       <div className="ai_chat">
 
          {chatMessages?.map((message, messageIndex) => (
-            message.messageType === "socialLinks" ? 
-            <SocialMediaLinksChatMessage
-               message={message}
-               index={messageIndex}
-            />
-            :
-            <ChatMessage
-               message={message}
-               index={messageIndex}
-            />
+            message.messageType === "socialLinks" ?
+               <SocialMediaLinksChatMessage
+                  message={message}
+                  index={messageIndex}
+               />
+               :
+               <ChatMessage
+                  message={message}
+                  index={messageIndex}
+               />
          ))}
 
          {isLoading &&
@@ -161,9 +161,11 @@ function SocialMediaLinksChatMessage(props: ChatMessageProps) {
             <p className="ai_chat_message_time">{props.message.time}</p>
          </div>
          {props.message.content}
-         <a href="https://www.linkedin.com/in/eduardoosteicoechea/" target="_blank">LinkedIn</a>
-         <a href="https://wa.me/584147281033" target="_blank">WhatsApp</a>
-         <a href="mailto:eduardooost@gmail.com" target="_blank">Email</a>
+         <div className="ai_chat_message_buttons_container">
+            <a className="ai_chat_message_button" href="https://www.linkedin.com/in/eduardoosteicoechea/" target="_blank">LinkedIn</a>
+            <a className="ai_chat_message_button" href="https://wa.me/584147281033" target="_blank">WhatsApp</a>
+            <a className="ai_chat_message_button" href="mailto:eduardooost@gmail.com" target="_blank">Email</a>
+         </div>
       </div>
    )
 }
