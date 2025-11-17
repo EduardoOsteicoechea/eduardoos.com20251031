@@ -18,12 +18,14 @@
 .user{
   width: 80%;
   margin-left: auto;
-  background: #eee;
+  background: #f0f0f0;
 }
 
 .assistant{
   width: 80%;
   background: #ccc;
+  background: #fff;
+  border: solid 1px #000;
 }
 
 .ai_chat_message_role_and_time_container{
@@ -52,9 +54,8 @@ margin-left: auto;
    text-decoration: none;
    font-size: 13px;
    font-family: inherit;
-   background: #00ff91;
-   color: #000;
-   font-weight: 600;
+   background: #000;
+   color: #fff;
    height: 30px;
    width: 90px;
    margin-left: auto;
