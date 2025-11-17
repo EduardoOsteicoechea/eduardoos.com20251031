@@ -4,14 +4,17 @@
   justify-content: center;
   align-items: center;
   gap: 10%;
+
   background: #000;
   height:  var(--main_button_dimmension);
   width:  var(--main_button_dimmension);
   z-index: 10000;
+
+  transition: all ease 500ms;
+
   position: fixed;
   top: 15px;
   right: 15px;
-  transition: all ease 1000ms;
 }
 
 .menu_button_active {
@@ -28,7 +31,7 @@
   height: 7%;
   border-radius: 2px;
   background: #fff;
-  transition: all 1000ms ease;
+  transition: all 200ms ease;
   top: 0px;
 }
 
