@@ -26,6 +26,8 @@
 
 .pitch_text {
   display: flex;
+  position: sticky;
+  bottom: 15px;
   flex-direction: column;
   background: rgba(255, 255, 255, 1);
   backdrop-filter: blur(5px);
