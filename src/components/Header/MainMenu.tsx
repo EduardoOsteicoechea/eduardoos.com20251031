@@ -24,7 +24,7 @@ export default function MainMenu(props: MainMenuProps) {
         <MainMenuItem
           to="/"
           heading="Home"
-          message="Know Eduardo Osteicoechea's value proposition and discover the website."
+          message="Know Eduardo's value proposition and discover the website."
           image="/images/icon_home.png"
           selectedItem={selectedItem}
           handleSelectedItem={handleSelected}
@@ -71,7 +71,7 @@ function MainMenuItem(props: MainMenuItemProps) {
 
         <div className="main_menu_item_data_card_heading_indicator_container">
           <h3 className="main_menu_item_data_card_heading">{props.heading}</h3>
-          <div className={`main_menu_item_status_indicator_outer_ring`}>
+          <div className={`main_menu_item_status_indicator_outer_ring ${props.selectedItem == props.heading ? "main_menu_item_status_indicator_outer_ring_selected" : ""}`}>
             <div className={`main_menu_item_status_indicator ${props.selectedItem == props.heading ? "selected" : ""}`}></div>
           </div>
         </div>

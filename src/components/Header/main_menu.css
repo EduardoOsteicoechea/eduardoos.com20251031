@@ -11,7 +11,7 @@
   z-index: 9000;
   top: 0;
   left: -100vw;
-  transition: all ease 500ms;
+  transition: all ease 1000ms;
 }
 
 .main_menu_active{
@@ -34,7 +34,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all ease 100ms;
+  transition: all ease 1000ms;
   gap: 20px;
 }
 .main_menu_main_link{

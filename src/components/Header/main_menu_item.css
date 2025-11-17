@@ -45,6 +45,9 @@
 }
 
 .main_menu_item_status_indicator_outer_ring {
+  display: none;
+}
+.main_menu_item_status_indicator_outer_ring_selected {
   display: flex;
   align-items: center;
   justify-content: center;

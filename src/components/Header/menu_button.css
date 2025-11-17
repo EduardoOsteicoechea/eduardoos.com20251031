@@ -4,22 +4,14 @@
   justify-content: center;
   align-items: center;
   gap: 10%;
-
   background: #000;
   height:  var(--main_button_dimmension);
   width:  var(--main_button_dimmension);
   z-index: 10000;
-
-  transition: all ease 500ms;
-
   position: fixed;
   top: 15px;
-  /* border: solid 1px #fff; */
   right: 15px;
-  /* right: calc(50% - var(--main_button_dimmension) / 2); */
-  
- /* box-shadow: 5px 5px 10px rgba(0,0,0,.5); */
- /* box-shadow: 10px 10px 10px rgba(0,0,0,.5); */
+  transition: all ease 1000ms;
 }
 
 .menu_button_active {
@@ -36,7 +28,7 @@
   height: 7%;
   border-radius: 2px;
   background: #fff;
-  transition: all 200ms ease;
+  transition: all 1000ms ease;
   top: 0px;
 }
 
