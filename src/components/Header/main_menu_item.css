@@ -57,7 +57,7 @@
   width: 15px;
   padding: 1.5px;
   border-radius: 30px;
-  border: solid 1px #000;
+  border: solid 3px #ddd;
 }
 
 .main_menu_item_status_indicator {

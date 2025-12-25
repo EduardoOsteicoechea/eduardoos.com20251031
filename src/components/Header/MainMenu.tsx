@@ -8,31 +8,18 @@ interface MainMenuProps {
 }
 
 export default function MainMenu(props: MainMenuProps) {
-
-   // const [selectedItem, setSelectedItem] = useState("Home");
-
    const handleSelected = () => {
       props.toggleMenu();
    }
 
    return (
       <div className={`main_menu ${props.active ? "main_menu_active" : ""}`}>
-         {/* <h2 className="main_menu_heading">Main Menu</h2> */}
          <div className="main_menu_link_container">
             <MainMenuItem
                to="/"
                heading="Home"
                message="Know Eduardo's value proposition and discover the website."
                image="/images/icon_home.png"
-               // selectedItem={selectedItem}
-               handleSelectedItem={handleSelected}
-            />
-            <MainMenuItem
-               to="/ai_assistant"
-               heading="AI Assistant"
-               message="Ask anything about my profile, tech stack, background and focus."
-               image="/images/icon_ai.png"
-               // selectedItem={selectedItem}
                handleSelectedItem={handleSelected}
             />
             <MainMenuItem
@@ -40,7 +27,6 @@ export default function MainMenu(props: MainMenuProps) {
                heading="Profile"
                message="View my professional background, skills, value proposition and focus."
                image="/images/icon_profile.png"
-               // selectedItem={selectedItem}
                handleSelectedItem={handleSelected}
             />
             <MainMenuItem
@@ -48,7 +34,6 @@ export default function MainMenu(props: MainMenuProps) {
                heading="Series"
                message="Read my articles in ethics, biblical teaching and cultural reflexion."
                image="/images/icon_series.png"
-               // selectedItem={selectedItem}
                handleSelectedItem={handleSelected}
             />
          </div>
